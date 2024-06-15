@@ -2,7 +2,6 @@ import { ConvertorFormComponent } from './convertor-form.component';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
-import { Subject } from 'rxjs';
 import {
 	ConvertedSessionsService,
 	ConvertorService,

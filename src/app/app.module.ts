@@ -3,15 +3,12 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './root/app.component';
-import {FooterComponent} from './shared/layout/widgets';
-import {HeaderComponent} from './shared/layout/widgets';
-import {ContentComponent} from './shared/layout/widgets';
 import {ConvertorComponent} from './shared/layout/components';
 import {HttpClientModule, provideHttpClient, withInterceptors} from "@angular/common/http";
-import {errorInterceptor, httpRequestsInterceptor} from "./shared/interceptors";
-import {ReactiveFormsModule} from "@angular/forms";
+import {httpRequestsInterceptor} from "./shared/interceptors";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ContentComponent, FooterComponent, HeaderComponent} from "./shared/layout/widgets";
 
 @NgModule({
 	declarations: [
@@ -32,8 +29,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 	providers: [
 		provideHttpClient(
 			withInterceptors([
-				httpRequestsInterceptor,
-				errorInterceptor
+				httpRequestsInterceptor
 			]),
 		)
 	],

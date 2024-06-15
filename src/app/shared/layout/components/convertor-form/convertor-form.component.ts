@@ -6,7 +6,7 @@ import {
 	FormatConverterService,
 	NotificationService
 } from "../../../services";
-import {catchError, EMPTY, Subject, takeUntil, throwError} from "rxjs";
+import {catchError, Subject, takeUntil, throwError} from "rxjs";
 import {InputFieldComponent, UiButtonComponent} from "../../ui";
 
 @Component({

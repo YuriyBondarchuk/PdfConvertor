@@ -4,7 +4,6 @@ import {Injectable} from '@angular/core';
 	providedIn: 'root'
 })
 export class FormatConverterService {
-
 	public pdfToBlob(document: any) {
 		return new Blob([document], { type: 'application/pdf' })
 	}
