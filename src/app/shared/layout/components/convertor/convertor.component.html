@@ -1,0 +1,17 @@
+<div class="bg-white mt-10" @moveUp>
+    <h2 class="text-center text-5xl font-bold">Make Your Life Easier</h2>
+    <app-convertor-form
+            (emitCreateBlob)="pdfSrc = $event" />
+
+    <div class="flex flex-wrap items-start justify-center gap-5 mt-10">
+        <div class="col-auto col-start-7 w-1/3 min-w-60">
+            <app-history-converted
+                    (emitShowFile)="showFile($event)"/>
+        </div>
+
+        <div class="col-auto col-start-auto w-1/3 min-w-60">
+            <app-pdf-preview
+                    [src]="pdfSrc" />
+        </div>
+    </div>
+</div>

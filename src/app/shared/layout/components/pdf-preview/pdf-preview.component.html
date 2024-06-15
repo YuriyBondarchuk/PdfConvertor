@@ -1,0 +1,14 @@
+<div class="viewer" @fade>
+    @if (src) {
+        <ng2-pdfjs-viewer
+			#pdfViewer
+            [pdfSrc]="src"
+            viewerId="uniqueId1"
+            [download]="true"
+            [openFile]="true"
+            [print]="true" />
+    } @else {
+        <p class="text-center text-1xl font-bold mb-3">Here we show your results</p>
+        <img class="m-auto max-w-36" src="assets/images/empty.svg">
+    }
+</div>

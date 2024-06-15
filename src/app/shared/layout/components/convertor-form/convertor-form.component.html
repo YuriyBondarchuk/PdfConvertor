@@ -1,0 +1,14 @@
+<div class="flex flex-wrap items-center justify-center mt-5">
+    <form [formGroup]="convertorFrom"
+          (ngSubmit)="convertToPDF()"
+          class="flex flex-wrap items-center justify-center gap-3">
+
+        <app-input-field formControlName="userText"
+                         placeholder="Enter Your Text" />
+
+        <app-ui-button type="submit"
+                       [disabled]="!convertorFrom.get('userText')?.valid">
+            Convert To PDF
+        </app-ui-button>
+    </form>
+</div>
